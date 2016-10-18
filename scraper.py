@@ -16,7 +16,7 @@ import os 							#for creating a directory
 if not os.path.exists('./files'):
     os.makedirs('./files')
 
-
+# added to scrape multiple files at a time
 #for looping to list of arguments
 
 for arg in sys.argv[1:]:
