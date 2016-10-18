@@ -1,8 +1,8 @@
 # Scraping-data-from-web
 
-I love cricket!!!
+#*I love cricket!!!*
 
-I am one of the many fans who watch test cricket ball-by-ball. But that doesn't mean that I don't enjoy the other formats of the game. I do feel that people don't give enough credit to Rahul Dravid for his prowess in ODIs. When they look at his numbers they woulld probably change their views.
+I am one of the many fans who watch test cricket ball-by-ball. But that doesn't mean that I don't enjoy the other formats of the game. I do feel that people don't give enough credit to *Rahul Dravid* for his prowess in ODIs. When they look at his numbers they woulld probably change their views.
 
 I would always love to look at the numbers. They will tell you many stories.
 
