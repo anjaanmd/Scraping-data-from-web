@@ -404,7 +404,7 @@ for arg in sys.argv[1:]:
 
 	first_innings_score_details_values = [first_innings_total, first_innings_extras, first_innings_wickets, first_innings_overs_bowled, first_innings_run_rate, first_innings_extras_lb, first_innings_extras_bye, first_innings_extras_wide, first_innings_extras_nb, 'first', match_id]
 
-	second_innings_score_details_values = [second_innings_total, second_innings_extras, second_innings_wickets, second_innings_overs_bowled, second_innings_run_rate, second_innings_extras_lb, second_innings_extras_bye, second_innings_extras_wide, second_innings_extras_nb, 'second' match_id]
+	second_innings_score_details_values = [second_innings_total, second_innings_extras, second_innings_wickets, second_innings_overs_bowled, second_innings_run_rate, second_innings_extras_lb, second_innings_extras_bye, second_innings_extras_wide, second_innings_extras_nb, 'second', match_id]
 
 	for item in score_details_values:
 		print(type(item), "score_details")
