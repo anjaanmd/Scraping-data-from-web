@@ -406,8 +406,8 @@ for arg in sys.argv[1:]:
 
 	second_innings_score_details_values = [second_innings_total, second_innings_extras, second_innings_wickets, second_innings_overs_bowled, second_innings_run_rate, second_innings_extras_lb, second_innings_extras_bye, second_innings_extras_wide, second_innings_extras_nb, 'second', match_id]
 
-	for item in score_details_values:
-		print(type(item), "score_details")
+	#for item in first_innings_score_details_values:
+	#	print(type(item), "score_details")
 
 	with open('./files/score_details.'+str(match_id)+'.csv', 'w') as csvfile5:
 		writer = csv.writer(csvfile5, delimiter=',', lineterminator='\n')
