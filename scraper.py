@@ -399,8 +399,8 @@ for arg in sys.argv[1:]:
 		jsonfile.write('\n')
 	
 	#writing csv file containing score details with the columns, 'innings_total', 'innings_extras', 'innings_wickets', 'innings_overs_bowled', 'innings_run_rate', 'innings_extras_lb', 'innings_extras_bye', 'innings_extras_wide', 'innings_extras_nb', innings and 'match_id'
-	
-	score_details_columns = ['innings_total', 'innings_extras', 'innings_wickets', 'innings_overs_bowled', 'innings_run_rate', 'first_innings_extras_lb', 'first_innings_extras_bye', 'first_innings_extras_wide', 'first_innings_extras_nb','second_innings_total', 'second_innings_extras', 'second_innings_wickets', 'second_innings_overs_bowled', 'second_innings_run_rate', 'second_innings_extras_lb', 'second_innings_extras_bye', 'second_innings_extras_wide', 'second_innings_extras_nb', 'match_id']
+
+	score_details_columns = ['innings_total', 'innings_extras', 'innings_wickets', 'innings_overs_bowled', 'innings_run_rate', 'innings_extras_lb', 'innings_extras_bye', 'innings_extras_wide', 'innings_extras_nb', 'innings', 'match_id']
 
 	first_innings_score_details_values = [first_innings_total, first_innings_extras, first_innings_wickets, first_innings_overs_bowled, first_innings_run_rate, first_innings_extras_lb, first_innings_extras_bye, first_innings_extras_wide, first_innings_extras_nb, 'first', match_id]
 
@@ -421,7 +421,9 @@ for arg in sys.argv[1:]:
 		field_names=tuple(score_details_columns)
 		dict1 = {}
 		for i in range(len(field_names)):
-			dict1[field_names[i]]=score_details_values[i]
+			dict1[field_names[i]]=first_innings_score_details_values[i]
+		for i in range(len(field_names)):
+			dict1[field_names[i]]=second_innings_score_details_values[i]
 		json.dump(dict1, jsonfile,sort_keys=False, indent=4, separators=(',', ': '))
 		jsonfile.write('\n')
 
