@@ -400,9 +400,11 @@ for arg in sys.argv[1:]:
 	
 	#writing csv file containing score details with the columns, 'first_innings_total', 'first_innings_extras', 'first_innings_wickets', 'first_innings_overs_bowled', 'first_innings_run_rate', 'first_innings_extras_lb', 'first_innings_extras_bye', 'first_innings_extras_wide', 'first_innings_extras_nb','second_innings_total', 'second_innings_extras', 'second_innings_wickets', 'second_innings_overs_bowled', 'second_innings_run_rate', 'second_innings_extras_lb', 'second_innings_extras_bye', 'second_innings_extras_wide', 'second_innings_extras_nb' and 'match_id'
 	
-	score_details_columns = ['first_innings_total', 'first_innings_extras', 'first_innings_wickets', 'first_innings_overs_bowled', 'first_innings_run_rate', 'first_innings_extras_lb', 'first_innings_extras_bye', 'first_innings_extras_wide', 'first_innings_extras_nb','second_innings_total', 'second_innings_extras', 'second_innings_wickets', 'second_innings_overs_bowled', 'second_innings_run_rate', 'second_innings_extras_lb', 'second_innings_extras_bye', 'second_innings_extras_wide', 'second_innings_extras_nb', 'match_id']
+	score_details_columns = ['innings_total', 'innings_extras', 'innings_wickets', 'innings_overs_bowled', 'innings_run_rate', 'first_innings_extras_lb', 'first_innings_extras_bye', 'first_innings_extras_wide', 'first_innings_extras_nb','second_innings_total', 'second_innings_extras', 'second_innings_wickets', 'second_innings_overs_bowled', 'second_innings_run_rate', 'second_innings_extras_lb', 'second_innings_extras_bye', 'second_innings_extras_wide', 'second_innings_extras_nb', 'match_id']
 
-	score_details_values = [first_innings_total, first_innings_extras, first_innings_wickets, first_innings_overs_bowled, first_innings_run_rate, first_innings_extras_lb, first_innings_extras_bye, first_innings_extras_wide, first_innings_extras_nb, second_innings_total, second_innings_extras, second_innings_wickets, second_innings_overs_bowled, second_innings_run_rate, second_innings_extras_lb, second_innings_extras_bye, second_innings_extras_wide, second_innings_extras_nb, match_id]
+	first_innings_score_details_values = [first_innings_total, first_innings_extras, first_innings_wickets, first_innings_overs_bowled, first_innings_run_rate, first_innings_extras_lb, first_innings_extras_bye, first_innings_extras_wide, first_innings_extras_nb, 'first', match_id]
+
+	second_innings_score_details_values = [second_innings_total, second_innings_extras, second_innings_wickets, second_innings_overs_bowled, second_innings_run_rate, second_innings_extras_lb, second_innings_extras_bye, second_innings_extras_wide, second_innings_extras_nb, 'second' match_id]
 
 	for item in score_details_values:
 		print(type(item), "score_details")
@@ -410,7 +412,8 @@ for arg in sys.argv[1:]:
 	with open('./files/score_details.'+str(match_id)+'.csv', 'w') as csvfile5:
 		writer = csv.writer(csvfile5, delimiter=',', lineterminator='\n')
 		writer.writerow(score_details_columns)
-		writer.writerow(score_details_values)
+		writer.writerow(first_innings_score_details_values)
+		writer.writerow(second_innings_score_details_values)
 
 	#writing json file containing score details
 
