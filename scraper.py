@@ -422,6 +422,8 @@ for arg in sys.argv[1:]:
 		dict1 = {}
 		for i in range(len(field_names)):
 			dict1[field_names[i]]=first_innings_score_details_values[i]
+		json.dump(dict1, jsonfile,sort_keys=False, indent=4, separators=(',', ': '))
+		jsonfile.write('\n')
 		for i in range(len(field_names)):
 			dict1[field_names[i]]=second_innings_score_details_values[i]
 		json.dump(dict1, jsonfile,sort_keys=False, indent=4, separators=(',', ': '))
